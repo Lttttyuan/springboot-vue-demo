@@ -44,7 +44,6 @@ request.interceptors.response.use(
         return Promise.reject(error)
     }
 )
-
-//测试123123
+//同步GitHub和Gitee
 
 export default request
