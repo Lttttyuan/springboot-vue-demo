@@ -1,7 +1,14 @@
 # springboot-vue-demo
 学习b站青戈简易的后台管理系统
 
-技术栈：springboot+vue3+mybatis-plus+MySQL
+测试账号：
+管理员：账号：01 密码：01
+普通用户：账号：10 密码：10
+
+服务器部署地址：
+http://47.113.221.249:8081/#/login
+
+技术栈：springboot+vue3+mybatis-plus+MySQL+wangEditor5富文本编辑器
 
 版本：springboot：2.6 MySQL：5.7
 

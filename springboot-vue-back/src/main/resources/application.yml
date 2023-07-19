@@ -12,3 +12,7 @@ spring:
 #    时间格式化
 #  jackson:
 #    date-format: yyyy-MM-dd
+#    设置mybatis-plus 日志输出信息
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
