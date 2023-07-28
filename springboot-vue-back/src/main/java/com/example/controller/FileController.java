@@ -94,9 +94,11 @@ public class FileController {
         }
     }
 
-//    @GetMapping("/delete/{id}")
-//    public Result<?> delete(@PathVariable Integer id){
-//        Book book = bookMapper.selectById(id);
+//    @PostMapping("/updataCover")
+//    public Result<?> delete(@RequestBody Book book) {
+//        String cover = book.getCover();
+//
+//        book.setCover(null);
 //        bookMapper.updateById(book);
 //
 //        return Result.success();
@@ -104,7 +106,7 @@ public class FileController {
 
     //编辑
     @PutMapping("/updata")
-    public Result<?> updata(@RequestBody Book book){
+    public Result<?> updata(@RequestBody Book book) {
         iBookService.updateById(book);
         return Result.success();
     }

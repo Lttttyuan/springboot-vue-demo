@@ -4,11 +4,21 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://47.113.221.249:3306/db_springboot-vue?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
+    #    url: jdbc:mysql://47.113.221.249:3306/db_springboot-vue?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
     url: jdbc:mysql://localhost:3306/db_springboot-vue?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
     #url: jdbc:mysql://localhost:3306/springboot-vue?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
+
+  servlet:
+    multipart:
+      # 启用
+      enabled: true
+      # 上传文件单个限制
+      max-file-size: 500KB
+      # 总限制
+      max-request-size: 10MB
+
 #    时间格式化
 #  jackson:
 #    date-format: yyyy-MM-dd
@@ -16,3 +26,10 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#    # 文件上传的最大值
+#    spring.servlet.multipart.max-file-size=10MB
+#    # 文件请求的最大值
+#    spring.servlet.multipart.max-request-size=10MB
+#    # 临时文件存储路径
+#    spring.servlet.multipart.location=/tmp

@@ -109,11 +109,26 @@
               </div>
             </template>
           </el-upload>
+<!--          <el-popconfirm-->
+<!--              title="确定删除吗？"-->
+<!--              @confirm="deleteCover"-->
+<!--          >-->
+<!--            <template #reference>-->
+<!--              <el-button type="danger" >删除封面</el-button>-->
+<!--            </template>-->
+<!--          </el-popconfirm>-->
         </el-form-item>
       </el-form>
 
 
       <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="dialogVisible = false">取消</el-button>
+        <el-button type="primary" @click="save">确认</el-button>
+      </span>
+      </template>
+
+      <template>
       <span class="dialog-footer">
         <el-button @click="dialogVisible = false">取消</el-button>
         <el-button type="primary" @click="save">确认</el-button>
@@ -161,6 +176,9 @@ export default {
     })
   },
   methods: {
+    fileUploadSuccess(res){
+      this.form.cover = res.data
+    },
     deleteBatch() {
       if (!this.ids.length) {
         this.$message.warning("请选择数据！")
